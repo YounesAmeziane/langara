@@ -71,7 +71,7 @@ const Convert = () => {
             </div>
           </div>
           <h4>
-            Name of the movie <br />
+            Name of the movie. <br />
             <span>
               2014 <br />
               horror
