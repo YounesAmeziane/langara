@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    color: #ccc;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background: linear-gradient(to right, #434343 0%, black 100%);
+}
+.sections{
+    padding: 0 100px;
+}
+/* header */
+header{
+    width: 100%;
+    height: 60vh;
+}
+.video-header {
+    position: relative;
+    overflow: hidden;
+    height: 80vh; /* Full height of the viewport */
+    width: 100%;
+}
+
+.background-video {
+    position: absolute; /* Position it absolutely within the header */
+    top: 50%;          /* Center vertically */
+    left: 50%;         /* Center horizontally */
+    min-width: 100%;   /* Cover the entire width */
+    min-height: 100%;  /* Cover the entire height */
+    width: auto;       /* Auto width for aspect ratio */
+    height: auto;      /* Auto height for aspect ratio */
+    z-index: -1;       /* Place video behind the content */
+    transform: translate(-50%, -50%); /* Center the video */
+}
+
+.content {
+    position: relative; /* Position relative to the header */
+    z-index: 1;         /* Bring content above the video */
+    color: white;       /* Text color */
+    text-align: center; /* Center align text */
+    padding: 20px;      /* Add some padding */
+}
+
+
+/* section */
+section {
+    margin: 25px 0;
+}
+section h1{
+    color: #ccc;
+    margin: 0 15px;
+}
+.row{
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.row::-webkit-scrollbar {
+    display: none;
+}
+.row h4{
+    text-align: left;
+    padding-left: 15px;
+    transition: .4s;
+}
+.row h4 span{
+    font-weight: 600;
+    font-size: 11px;
+    color: #a7a6a6;
+    font-style: italic;
+}
+.row .item{
+    min-width: 230px;
+    height: 330px;
+    line-height: 110px;
+    text-align: center;
+    background-color: #ddd;
+    margin: 15px;
+    border-radius: 30px;
+    -webkit-box-shadow: inset 3px 3px 147px -57px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 3px 3px 147px -57px rgba(0,0,0,0.75);
+    box-shadow: inset 3px 3px 147px -57px rgba(0,0,0,0.75);
+}
+.row .card .buttons{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+}
+.row .card .buttons:hover{
+    opacity: 1;
+}
+.row .card:hover > h4 {
+    color: #E50914;
+}
+.row .card .buttons button{
+    padding: 8px 12px;
+    background: #e50914b6;
+    color: #ccc;
+    border: #bbb;
+    border-radius: 30px;
+    transition: .4s;
+    cursor: pointer;
+}
+.row .card .buttons button:hover{
+    background-color: #E50914;
+}
+.category{
+    display: flex;
+}
+.side-button{
+    padding: 8px 12px;
+    background: #e50914b6;
+    color: #ccc;
+    border: #bbb;
+    border-radius: 30px;
+    transition: .4s;
+    cursor: pointer;
+    display: block;
+    margin: 10px 15px;
+}
+/* Responsive styles */
+@media (max-width: 600px) {
+    header {
+        height: 40vh; /* Further adjust height for smaller screens */
+    }
+    .sections {
+        padding: 0 30px;
+    }
+}
